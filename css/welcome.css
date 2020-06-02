@@ -10,13 +10,13 @@
   top:calc(50% + 80px);
   z-index:8;
   transform:translate(-50%,-50%);
-  width:100%;  
-  
+  width:100%;
+  min-width:1280px;
 }
 .btn_box{
   position: absolute;
   left:0;
-  bottom:20vh;
+  bottom:100px;
   z-index:9;
   width:100%;
   text-align:center;
@@ -39,4 +39,27 @@
 }
 .btn_box>a:hover>input{
   color:gray;
+}
+
+/* 테블릿 스타일 */
+@media (max-width:960px){
+  #welcome video{
+    min-width:900px;
+  }
+}
+
+
+
+
+
+/* 모바일 스타일 */
+@media (max-width:767px){
+  #welcome video{
+    width:auto;
+    max-width:auto;
+    height:100%;
+  }
+  .btn_box{
+    bottom:10vw;
+  }
 }
