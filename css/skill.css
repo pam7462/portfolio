@@ -7,6 +7,53 @@
 .skill_list>li:nth-child(5){
   width:50%;
 }
+.skill_list>li>.img_box>img{
+  width:100%;
+}
+.progress{
+  width:100%;
+  max-width:260px;
+  height:30px;
+  background-color:#cccccc;
+  position: relative;
+}
+.progress>span{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  color:#cccccc;
+  font-weight:bold;
+}
+.skill_list>li .progress::before{
+  content:'';
+  display:block;
+  width:0;
+  height:100%;
+  background-color:red;
+  transition:0.3s;
+}
+.skill_list>li:nth-child(1):hover .progress::before{
+  width:100%;
+}
+.skill_list>li:nth-child(2):hover .progress::before{
+  width:90%;
+}
+.skill_list>li:nth-child(3):hover .progress::before{
+  width:70%;
+}
+.skill_list>li:nth-child(4):hover .progress::before{
+  width:95%;
+}
+.skill_list>li:nth-child(5):hover .progress::before{
+  width:70%;
+}
+.skill_list>li:hover::after{
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+}
 
 
 
@@ -17,7 +64,12 @@
 
 /* 테블릿 스타일 */
 @media (max-width:960px){
-  
+  .skill_list>li{
+    width:50% !important;
+  }
+  .skill_list>li:nth-child(5){
+    width:100%;
+  }
 }
 
 
@@ -28,9 +80,11 @@
 /* 모바일 스타일 */
 @media (max-width:767px){
   .skill_list>li{
-    width:50%;
+    flex-flow:column nowrap !important;
+    width:100% !important;
   }
-  .skill_list>li:nth-child(5){
-    width:100%;
+  .progress{
+    width:60%;
+    /* max-width:200px; */
   }
 }
