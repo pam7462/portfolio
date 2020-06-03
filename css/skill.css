@@ -3,10 +3,19 @@
 .skill_list>li{
   width:32%;
 }
+
 .skill_list>li:nth-child(4),
 .skill_list>li:nth-child(5){
   width:50%;
 }
+.skill_list>li>.img_box{
+  transition:0.3s;
+  transition-delay:0.1s;
+}
+.skill_list>li:hover>.img_box{
+  transform:scale(1.1) skew(5deg,5deg) rotate(5deg);
+}
+
 .skill_list>li>.img_box>img{
   width:100%;
 }
@@ -24,6 +33,9 @@
   transform:translate(-50%,-50%);
   color:#cccccc;
   font-weight:bold;
+}
+.skill_list>li:hover .progress>span{
+  color:#ffffff;
 }
 .skill_list>li .progress::before{
   content:'';
