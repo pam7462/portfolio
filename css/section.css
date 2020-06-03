@@ -4,9 +4,9 @@
 .section{
   width:100%;
   max-width:1980px;
-  height:100vh;
   margin:0 auto;
   padding-top:80px;
+  padding-bottom:50px;
 }
 
 h2{
@@ -40,9 +40,7 @@ h2{
 
 /* 테블릿 스타일 */
 @media (max-width:960px){
-  .section{
-    height:500px;
-  }
+  
 }
 
 
@@ -55,7 +53,5 @@ h2{
 
 /* 모바일 스타일 */
 @media (max-width:767px){
-  .section{
-    height:100vw;
-  }
+  
 }
