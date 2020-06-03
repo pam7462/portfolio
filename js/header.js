@@ -31,4 +31,33 @@ $(function(){
     }
   }
   //end 네비게이션변환함수
+  
+  // start 스크롤이벤트
+    $(window).scroll(function(){
+      var scrTop=$(this).scrollTop();
+      if(scrTop<50){
+        $('.header').css({
+          backgroundColor:'white',
+          height:'100px'
+        });
+      }else if(scrTop>=50 && scrTop<=400){
+        $('.header').css({
+          backgroundColor:'red',
+          height:'80px'
+        });
+      }else if(scrTop>=401 && scrTop<=750){
+        $('.header').css({
+          backgroundColor:'green',
+          height:'80px'
+        });
+      }else if(scrTop>=751){
+        $('.header').css({
+            backgroundColor:'blue',
+            height:'80px'
+          });
+      }
+    });
+  // end 스크롤이벤트
+  // var tmp=$('#skill');
+  console.log($('#skill').offset().top);
 })
