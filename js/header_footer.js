@@ -9,6 +9,7 @@ $(function(){
   //start 문서준비
   navMenu();
   sectionTop();
+  telBottom();
   //end 문서준비
 
   // start 버거메뉴이벤트
@@ -24,6 +25,7 @@ $(function(){
   $(window).resize(function(){
     navMenu();
     sectionTop();
+    telBottom();
   });
   //end 리사이즈이벤트
   
@@ -42,6 +44,7 @@ $(function(){
   
   // start 스크롤이벤트
     $(window).scroll(function(){
+      telBottom();
       var scrTop=$(this).scrollTop();
       if(scrTop<=50){
         $('.header').css({
@@ -102,16 +105,22 @@ $(function(){
   // start 해더 푸터 마우스 휠 이벤트
   $('body').on('mousewheel',function(e){
     var vectorY=e.originalEvent.wheelDelta;
-    console.log(vectorY);
+    // console.log(vectorY);
     if(vectorY>0){
-      console.log('윗쪽');
+      // console.log('윗쪽');
       $('footer').fadeOut(200);
       $('header').fadeIn(200);
     }else{
-      console.log('아랫쪽');
+      // console.log('아랫쪽');
       $('footer').fadeIn(200);
       $('header').fadeOut(200);
     }
   });    
   // end 해더 푸터 마우스 휠 이벤트
+
+  function telBottom(){
+    var footerHeight=$('footer').height();
+    // console.log(footerHeight);
+    $('#tel').css('margin-bottom',footerHeight);
+  }
 })
