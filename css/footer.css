@@ -7,6 +7,7 @@ footer{
   width:100%;
   z-index:10;
   background-color:#000000;
+  display:none;
 }
 footer>.content{
   height:100px;

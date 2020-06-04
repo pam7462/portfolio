@@ -8,7 +8,7 @@
 #welcome video{
   position:absolute;
   left:50%;
-  top:calc(50% + 80px);
+  top:50%;
   z-index:8;
   transform:translate(-50%,-50%);
   width:100%;
