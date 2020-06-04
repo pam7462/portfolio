@@ -1,7 +1,14 @@
 $(function(){
+  
+  var welcomeTop;
+  var iamTop;
+  var skillTop;
+  var portfolioTop;
+  var telTop;
 
   //start 문서준비
   navMenu();
+  sectionTop();
   //end 문서준비
 
   // start 버거메뉴이벤트
@@ -16,6 +23,7 @@ $(function(){
   // start 리사이즈이벤트
   $(window).resize(function(){
     navMenu();
+    sectionTop();
   });
   //end 리사이즈이벤트
   
@@ -35,29 +43,42 @@ $(function(){
   // start 스크롤이벤트
     $(window).scroll(function(){
       var scrTop=$(this).scrollTop();
-      if(scrTop<50){
+      if(scrTop<=50){
         $('.header').css({
-          backgroundColor:'white',
+          backgroundColor:'#ffffff',
           height:'100px'
         });
-      }else if(scrTop>=50 && scrTop<=400){
+      }else if(scrTop>50 && scrTop<skillTop){
         $('.header').css({
-          backgroundColor:'red',
+          backgroundColor:'#ffffff',
           height:'80px'
         });
-      }else if(scrTop>=401 && scrTop<=750){
+      }else if(scrTop>=skillTop && scrTop<portfolioTop){
         $('.header').css({
-          backgroundColor:'green',
+          backgroundColor:'#ff0000',
           height:'80px'
         });
-      }else if(scrTop>=751){
+      }else if(scrTop>=portfolioTop && scrTop<telTop){
         $('.header').css({
-            backgroundColor:'blue',
-            height:'80px'
-          });
+          backgroundColor:'#ffffff',
+          height:'80px'
+        });
+      }else if(scrTop>=telTop){
+        $('.header').css({
+          backgroundColor:'#00ff00',
+          height:'80px'
+        });
       }
     });
   // end 스크롤이벤트
-  // var tmp=$('#skill');
-  console.log($('#skill').offset().top);
+  
+  // start section Y좌표값 함수
+  function sectionTop(){
+    welcomeTop=$('#welcome').offset().top-80;
+    iamTop=$('#i_am').offset().top-80;
+    skillTop=$('#skill').offset().top-80;
+    portfolioTop=$('#portfolio').offset().top-80;
+    telTop=$('#tel').offset().top-80;
+  }
+  // end section Y좌표값 함수
 })
