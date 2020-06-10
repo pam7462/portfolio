@@ -23,7 +23,6 @@ this is an h2
       * 4단계
         * 5단계
         
-기본쓰기
-  들려쓰기
-기본쓰기
-  들여스기
+basic write
+  indent write
+basic write
