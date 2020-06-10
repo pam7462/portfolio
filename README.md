@@ -1,5 +1,12 @@
 this is an h1
 =============
 # this is an h1
-[>this is first blockqute.]
+this is an h2
+-------------
+## this is an h2
+### this is an h3
+#### this is an h4
+##### this is an h5
+###### this is an h6
+
 > this is a first blockqute.
